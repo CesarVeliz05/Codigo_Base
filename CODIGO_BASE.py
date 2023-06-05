@@ -75,7 +75,7 @@ def generador_lista():# Solicitar al usuario que ingrese elementos
                     else:
                         print("direccion ip invalida. Favor de ingresar un direccion ip valida.")
                 while True:
-                    mascara = int(input("Ingrese mascara de red en la que trabaja la interfaz: "))#Mascara de red de la interfaz
+                    mascara = int(input("Ingrese mascara de red en la que trabaja la interfaz: \n(Debe de ingresar la mascara de red sin /, solo el numero de mascara."))#Mascara de red de la interfaz
                     if mascara >= 0 and mascara <= 32:
                         mascara = str(mascara)
                         break
