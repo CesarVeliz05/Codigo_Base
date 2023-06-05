@@ -45,7 +45,7 @@ def generador_lista():# Solicitar al usuario que ingrese elementos
                 else:
                     print("direccion ip invalida. Favor de ingresar un direccion ip valida.")
             while True:
-                mascara = int(input("Ingrese mascara de red en la que trabaja la interfaz: "))#Mascara de red de la interfaz
+                mascara = int(input("Ingrese mascara de red en la que trabaja la interfaz: \n(Ingresar solamente el prefijo de red y sin el /. Ej: 24"))#Mascara de red de la interfaz
                 if mascara > 0 and mascara <= 32:
                     mascara = str(mascara)
                     i = i + 1 #Mascara de red de la interfaz 
@@ -53,7 +53,7 @@ def generador_lista():# Solicitar al usuario que ingrese elementos
                 elif mascara <= 0 or mascara > 30:
                     print("La mascara de red ha sido ingresada erroneamente.")
             destino = input("Ingrese nombre del dispositvo de destino: "); i = i + 1 #destino de la interfaz o hacia donde llegará esa interfaz
-            capa_jerarquica = input("Ingrese la capa jerarquica perteneciente al equipo: "); i = i +1 #jerarquia perteneciente al equipo
+            capa_jerarquica = input("Ingrese la capa jerarquica perteneciente al equipo: \n(NUCLEO, DISTRIBUCION, ACCESO) "); i = i +1 #jerarquia perteneciente al equipo
             servicio_adheridos = input("Ingrese los servicios que estan disponibles en el dispositivo: "); i = i +1 #servicios que estan configurados en el equipo
             protocolos_de_red = input("Ingrese los protocolos de enrutamiento del dispositivo: "); i = i +1 #protocolos de red que tiene configurado el equipo
             lista.append(zona+"\t"+dispositivo+"\t"+interfaz+"\t"+direccion_ip+"\t"+"/"+mascara+"\t"+"\t"+destino+"\t"+capa_jerarquica+"\t"+"\t"+protocolos_de_red+"\t"+"\t"+servicio_adheridos+"\n"); i = i +1 #se agrega las variables a una lista
